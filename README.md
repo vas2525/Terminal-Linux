@@ -1,2 +1,3 @@
 # Terminal-Linux
-Terminal-Linux tasks
+Terminal-Linux exercises
+
