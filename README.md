@@ -1,2 +1,2 @@
 # Terminal-Linux
-Terminal-Linux tasks
+Terminal-Linux-Git Bash tasks
