@@ -1,0 +1,82 @@
+GitHub. HW_2
+1. On the local repository, make branches for:
+- Postman
+git checkout -b Postman
+- Jmeter
+git checkout -b Jmeter
+- Checklists
+git checkout -b Checklists
+- Bag reports
+git checkout -b Bag_reports
+-SQL
+git checkout -b SQL
+- Charles
+git checkout -b Charles
+- mobile testing
+git checkout -b mobile_testing
+
+2. Push all branches to an external repository
+git push origin -u --all 
+3. In the Bag Reports branch, make a text document with the bug report structure
+touch bug_reports
+vim bug_reports
+
+BUG-REPORT
+
+ID:
+Title:
+Environment:
+Steps to reproduce:
+Priority:
+Severity:
+Expected Result:
+Actual Result:
+4. Push the bug report structure to the external repository
+git commit -am "bug_reports added" && git push
+5. Merge the Bag Reports branch into Main
+git checkout main
+git merge BugReports
+6. Push main to the external repository.
+git push
+7. In the CheckLists branch, outline the checklist structure.
+git checkout CheckLists
+touch CheckList.txt
+vim CheckList.txt
+8. Push the structure to an external repository
+git add . && git commit -m "checklist" && git push
+9. On the external repository, make a Pull Request of the CheckLists branch in main
+GitHub -> CheckLists had recent pushes less than a minute ago -> Compare && Pull requests -> Pull request successfully merged and closed
+10. Synchronize External and Local branches Main
+git checkout main && git pull
+
+Create an SSH key
+ssh-keygen -t rsa -C "githubNickname"
+
+My SSH keys are stored here:
+/Users/stude/.ssh/id_rsa.pub
+
+To add the created key to the github, you need:
+0. Copy the entire text WITHOUT EXTRA CHARACTERS from the id_rsa.pub file
+1. On the github, click on the account icon
+2.Settings
+3. Left SSH & GPG keys
+4. Green button New SSH key
+5. Insert the key from id_rsa.pub into Key, in Title we write the name of the key
+6. Save
+
+
+BRANCH & MERGE
+Team
+git branch
+Lists all existing branches and marks * the one we are currently on
+
+Will create a new branch apple_pay
+git branch apple_pay
+
+Switch to apple_pay branch
+Git checkout apple_pay
+
+To merge the apple_pay branch into main, you need to move to main (Git checkout main) and therefore enter the git merge apple_pay command
+
+Push the apple_pay branch to an external repository
+git push -u origin apple_pay
