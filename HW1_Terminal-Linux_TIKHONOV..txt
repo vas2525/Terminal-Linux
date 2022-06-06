@@ -1,0 +1,59 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+1) See where I am - pwd
+2) Create folder - mkdir
+3) Go to the folder - cd
+4) Create 3 folders mkdir name1 name2 name3
+5) Go to any folder cd name1
+6) Create 5 files (3 txt, 2 json) touch q1.txt q2.txt q3.txt q1.json q2.json
+7) Create 3 folders mkdir qa_1 qa_2 qa_3
+8) List the contents of the folder ls -la
+9) + Open any txt file - cat q1.txt
+10) + write something there, any text.
+cat >> q1.txt
+Hi tutor!
+How are you?
+11) + save and exit. CTRL+D
+12) Exit the folder one level up cd ..
+13) Move any 2 files you have created to any other folder. mv name1 name2 /name3
+14) copy any 2 files you created to any other folder. cp q2.txt q3.txt /name3
+15) Find a file named find q3.txt
+16) View content in real time (grep command) learn how it works.
+tail -f qq.txt
+17) Output the first few lines from a text file
+head qq.txt
+18) Output the last few lines from a text file
+tail qq.txt
+19) View the contents of a long file (less command) learn how it works. less +F qq.txt
+20) Display date and time - date +"%D %T"
+=========
+
+Exercise *
+1) Send an http request to the server.
+http://162.55.220.72:5005/terminal-hw-request
+-------------------------------------------------- --------
+curl -i -X OPTIONS http://162.55.220.72:5005/terminal-hw-request
+-------------------------------------------------- --------
+2) Write a script that will automatically execute steps 3, 4, 5, 6, 7, 8, 13
+
+touch myscript.sh
+vim myscript.sh  For start editing press "i"
+
+
+#!/bin/bash
+cd group_29_Free
+mkdir name1 name2 name3
+cd name1
+touch q1.txt q2.txt q3.txt q1.json q2.json
+mkdir qa_1 qa_2 qa_3
+ls -la
+mv name1/q1.txt name1/q2.txt ../name2
+
+Esc :wq Enter
+./script
+
+
+
+
+=====================
