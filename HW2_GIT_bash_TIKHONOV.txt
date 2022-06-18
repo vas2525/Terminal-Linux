@@ -1,0 +1,111 @@
+1. Make folder dir_1: mkdir dir_1
+2. Go to dir_1 folder: cd dir_1
+3. Create folder inner_dir_1: mkdir inner_dir_1
+4. See where you are: pwd
+5. Being in the dir_1 folder, create an empty text file tf_1.txt: touch tf_1.txt
+6. Being in the dir_1 folder, use the cat command to create a text file tf_2.txt with the following lines:
+- the first 1
+- second 2
+- the third 3
+
+cat > tf_2.txt
+-the first 1
+-the second 2
+-the third 3
+
+7. Go to the folder inner_dir_1: cd inner_dir_1
+8. Through cat make a text file tf_3.txt with any lines
+
+cat > tf_3.txt
+hello
+my
+name
+is
+Alesia
+
+9. Through cat add the line “the second 2” to the text file tf_3.txt
+
+cat >> tf_3.txt
+the second 2
+
+10. Through cat add the line “the sec 2” to the text file tf_3.txt
+
+cat >> tf_3.txt
+the sec 2
+
+11. Through cat add the line “the sec 3” to the text file tf_2.txt
+
+cat >> ../tf_2.txt
+the sec 3
+
+12. Through cat add the line “the SeCoNd 2” to the text file tf_3.txt
+
+cat >> tf_3.txt
+the SeCond 2
+
+13. Through cat add the line “the seConD 2” to the text file tf_2.txt
+
+cat >> ../tf_2.txt
+the seConD 2
+
+14. Make a text file tf_4.txt which will contain 15 lines.
+
+cat > tf_4.txt
+qwerty
+vertyu
+ertyui
+rtyuio
+tyuiop
+yuiop[
+uiop[]
+iop[]\
+op[]\a
+p[]\as
+[]\asd
+]\asdf
+\asdfg
+asdfgh
+sdfghj
+
+15. Make a text file tF_5.txt which will contain 13 lines.
+
+cat > tF_5.txt
+dfghjk
+fghjkl
+ghjkl;
+hjkl;'
+jkl;'z
+kl;'zx
+l;'zxc
+;'zxcv
+'zxcvb
+zxcvbn
+xcvbnm
+cvbm,
+vbnm.
+
+16. List all files in a folder: ls -la | grep ^-
+17. Exit folder inner_dir_1: cd ../
+18. Output the contents of the tf_3.txt file to the terminal: cat ./inner_dir_1/tf_3.txt
+19. Find the path to the file tf_4.txt: find / -name tf_4.txt (realpath tf_4.txt)
+20. Clean up the contents of the tf_4.txt file without deleting the file itself: cat /dev/null > inner_dir_1/tf_4.txt
+21. Find the path to files that have “tf” in their names: find / -name "*tf*.*" -type f
+22. Find the path to files that have “tf” in the name and letters in any case: find / -iname "*tf*.*" -type f
+23. Find lines in files where there is a combination of letters “sec” in the current folder: grep sec *.txt
+24. Find lines in files where there is a combination of letters “sec” in any case in the current folder: grep -i sec *.txt
+25. Find lines in files where there is only a combination of letters “sec” in the current folder: grep -w sec *.txt
+26. Find lines in files where there is only a combination of letters “sec” in any case in the current folder: grep -iw sec *.txt
+27. Find lines in files where there is a combination of letters “second” in the current folder: grep second *.txt
+28. Find lines in files where there is a combination of letters “second” in any case in the current folder: grep -i second *.txt
+29. Find lines in files where there is a combination of letters “second” in all folders below the level: grep -r second */*
+30. Find only the path and file name in the lines of which there is a combination of letters “second” in the current folder: grep -l second *.txt | xargs realpath
+31. Find all lines in all files where there is no “second” combination: grep -vr second * | xargs realpath
+32. Find only the name and path to files where there is no “second” combination: grep -rL second * | xargs realpath
+33. Output the last 4 lines of any text file to the terminal: tail -n4 tf_2.txt
+34. Output to terminal 4 the first lines of any text file: head -n4 tf_2.txt
+35. One line command. Create a folder and create a text file with the contents: mkdir new_folder|echo "Hello! This is file #1" > f_1.txt
+36. Command in one line. Move text files containing the word “sec” to any one folder: grep -rlw sec * | xargs mv -t ./new1
+37. Command in one line. Copy to any one folder text files that have the word “sec” in their content grep -rlw sec * | xargs cp -t ./new2
+38. Command in one line. Find all lines c "sec" in all text files, copy and paste these lines into one new text file created: grep -rh sec * > new.txt
+39. Command in one line. Delete text files that have the word “sec” in their content: grep -rlw sec * | xargs -l rm
+40. Output the line “Good job!!” to the terminal: echo "Good job!!"
